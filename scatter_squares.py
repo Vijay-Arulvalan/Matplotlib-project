@@ -6,5 +6,6 @@ plt.title("Square Numbers", fontsize=24)
 plt.xlabel("Values", fontsize=14)
 plt.ylabel("Square of values", fontsize=14)
 #set size of a tick labels
+plt.tick_params(axis='both', which='major', labelsize=14)
 
 plt.show()
