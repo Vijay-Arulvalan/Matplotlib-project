@@ -5,6 +5,6 @@ from random_walk import RandomWalk
 rw = RandomWalk() #we create a random walk and store it in rw
 rw.fill_walk()
 
-plt.scatter(rw.x_values, rw.y_values,c='Red', edgecolor='none', s=10) #c=rw.y_values, cmap=plt.cm.Reds
+plt.scatter(rw.x_values, rw.y_values,c='Red', edgecolors='none', s=10) #c=rw.y_values, cmap=plt.cm.Reds
 plt.savefig('rw.png', bbox_inches='tight')
 plt.show()
