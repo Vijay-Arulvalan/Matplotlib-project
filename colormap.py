@@ -11,4 +11,5 @@ plt.ylabel("Square of values", fontsize=14)
 plt.axis([0, 1100, 0, 1100000])
 
 plt.savefig('color.png', bbox_inches='tight') #to save in png we need to use this command
+#the second argument bbox_inches trims extra whitespace from the plot
 plt.show()
