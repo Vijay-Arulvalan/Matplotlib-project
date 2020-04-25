@@ -14,18 +14,20 @@ class RandomWalk():
         """Keep taking the steps until the walk reaches the desired length"""
         while len(self.x_values) < self.num_points:
             #Decide which direction to go and how far to go in that direction
-            x_direction = choice([1, -1])
-            x_distance = choice([0, 1, 2, 3, 4])
-            x_step = x_direction * x_distance
+
+            x_direction = choice([1, -1]) #1 for right or -1 for left movement
+            x_distance = choice([0, 1, 2, 3, 4]) #tells python how far to move in that direction
+            x_step = x_direction * x_distance #positive for move right and negative for move left and 0 moves vertically
 
             y_direction = choice([1, -1])
             y_distance = choice([0, 1, 2, 3, 4])
-            y_step = y_direction * y_distance
-
+            y_step = y_direction * y_distance #positive for move up and negative for move down and 0 for move horizontally
+            #if the value of x_step and y_step 0 then the walk stops #to continue the loop to prevent this
             #Reject moves that go nowhere
             if x_step == 0 and y_step ==0:
                 continue
                 #calculate the next x and y values
+                #to get the next value for the x_values we add the value to x_step which stored last in x_values
             next_x = self.x_values[-1] + x_step
             next_y = self.y_values[-1] + y_step
 
